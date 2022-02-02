@@ -41,6 +41,12 @@ It can be in the form of:
     "Best network station for point x,y is x,y with speed z"
     "No network station within reach for point x,y"
 
+# Local test
+        - npm install
+        - npm i --save express
+        - npm start
+        - open http://localhost:5000/calculate
+
 # Heroku deployment
         - heroku login
         - heroku create
@@ -49,9 +55,11 @@ It can be in the form of:
         - heroku ps:scale web=1
         - heroku open
         - heroku logs --tail    
-
+        - used the link given and generated (different each time) by heroku open
+         url: https://.../calculate - like this (https://sleepy-retreat-19333.herokuapp.com/calculate)
 # Dockerfile
-sudo docker image build -t app .
-docker images
-sudo docker run -p  5000:5000 app
+        - sudo docker image build -t app .
+        - docker images
+        - sudo docker run -p  5000:5000 app
+        - open http://localhost:5000/calculate
 
