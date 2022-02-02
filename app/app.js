@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
 var fs = require("fs");
-const calcule = require('../network_speed.js');
+const calcule = require('./network_speed.js');
+// For heroku port specification 
 const PORT = process.env.PORT || 5000
 
 /* 
@@ -57,6 +58,7 @@ app.post('/calculate', function (req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.json(listResult);
 })
+
 
 var server = app.listen(PORT, function () {
    var host = "0.0.0.0"

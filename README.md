@@ -41,3 +41,8 @@ It can be in the form of:
     "Best network station for point x,y is x,y with speed z"
     "No network station within reach for point x,y"
 
+# Dockerfile
+sudo docker image build -t app .
+docker images
+sudo docker run -p  5000:5000 app
+
