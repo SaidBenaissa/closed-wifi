@@ -5,11 +5,13 @@
   "main": "network_speed.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app/app.js"
+    "start": "node app/app.js"
   },
   "author": "",
   "license": "ISC",
+  
   "dependencies": {
     "express": "^4.17.2"
   }
+
 }
