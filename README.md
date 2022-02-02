@@ -41,6 +41,13 @@ It can be in the form of:
     "Best network station for point x,y is x,y with speed z"
     "No network station within reach for point x,y"
 
+# Heroku deployment
+        - heroku login
+        - heroku create
+        - git commit -am "start fix 2"    
+        - git push heroku main
+        - heroku logs --tail    
+
 # Dockerfile
 sudo docker image build -t app .
 docker images

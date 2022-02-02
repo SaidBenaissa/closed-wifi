@@ -32,23 +32,23 @@ const PORT = process.env.PORT || 5000
 //     [25, 99]
 // ];
 
-// data = {
-//     "stations" : [
-//         [0, 0, 9],
-//         [20, 20, 6],
-//         [10, 0, 12],
-//         [5, 5, 13],
-//         [99, 25, 2]
-//     ],
-//     "points" : [
-//         [0, 0],
-//         [100, 100],
-//         [15, 10],
-//         [18, 18],
-//         [13, 13],
-//         [25, 99]
-//     ]
-// }
+ data = {
+     "stations" : [
+         [0, 0, 9],
+         [20, 20, 6],
+         [10, 0, 12],
+         [5, 5, 13],
+         [99, 25, 2]
+     ],
+     "points" : [
+         [0, 0],
+         [100, 100],
+         [15, 10],
+         [18, 18],
+         [13, 13],
+         [25, 99]
+     ]
+ }
 
 app.use(express.json());
 
@@ -57,6 +57,13 @@ app.post('/calculate', function (req, res) {
       listResult = calcule.calculate(req.body.stations,req.body.points)
       res.setHeader('Content-Type', 'application/json');
       res.json(listResult);
+})
+
+app.get('/calculate', function (req, res) {
+    bodyRequest = data; 
+    listResult = calcule.calculate(bodyRequest.stations,bodyRequest.points)
+    res.setHeader('Content-Type', 'application/json');
+    res.json(listResult);
 })
 
 
