@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 const calcule = require('../network_speed.js');
+const PORT = process.env.PORT || 5000
 
 /* 
 * The most suitable (with highest non-zero speed) network station for a device at a given point (x, y).
@@ -57,7 +58,7 @@ app.post('/calculate', function (req, res) {
       res.json(listResult);
 })
 
-var server = app.listen(5000, function () {
+var server = app.listen(PORT, function () {
    var host = "0.0.0.0"
    var port = server.address().port
    console.log("Example app listening at http://%s:%s", host, port)
