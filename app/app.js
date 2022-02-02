@@ -57,8 +57,8 @@ app.post('/calculate', function (req, res) {
       res.json(listResult);
 })
 
-var server = app.listen(8081, function () {
-   var host = server.address().address
+var server = app.listen(5000, function () {
+   var host = "0.0.0.0"
    var port = server.address().port
    console.log("Example app listening at http://%s:%s", host, port)
 })
