@@ -2,37 +2,14 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 const calcule = require('./network_speed.js');
-// For heroku port specification 
 const PORT = process.env.PORT || 5000
 
 /* 
 * The most suitable (with highest non-zero speed) network station for a device at a given point (x, y).
 */
 
-/* 
-* Stations represented by an array of x,y coordinates and r the reach of each station [x,y,r].
-*/
-// const stations = [
-//     [0, 0, 9],
-//     [20, 20, 6],
-//     [10, 0, 12],
-//     [5, 5, 13],
-//     [99, 25, 2]
-// ];
-
-/*
-* Points or devices coordinates (x,y) represented in cartesian coordinates by an array of [x,y].
-*/
-// const points = [
-//     [0, 0],
-//     [100, 100],
-//     [15, 10],
-//     [18, 18],
-//     [13, 13],
-//     [25, 99]
-// ];
-
  data = {
+     /* Stations represented by an array of x,y coordinates and r the reach of each station [x,y,r].*/
      "stations" : [
          [0, 0, 9],
          [20, 20, 6],
@@ -40,6 +17,7 @@ const PORT = process.env.PORT || 5000
          [5, 5, 13],
          [99, 25, 2]
      ],
+     /* Points or devices coordinates (x,y) represented in cartesian coordinates by an array of [x,y].*/
      "points" : [
          [0, 0],
          [100, 100],

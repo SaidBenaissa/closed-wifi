@@ -46,6 +46,8 @@ It can be in the form of:
         - heroku create
         - git commit -am "start fix 2"    
         - git push heroku main
+        - heroku ps:scale web=1
+        - heroku open
         - heroku logs --tail    
 
 # Dockerfile

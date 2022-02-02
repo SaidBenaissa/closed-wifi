@@ -7,10 +7,11 @@ const distance = (A, B) => {
     return Math.sqrt(Math.pow(Math.abs(A[0] - B[0]), 2) + Math.pow(Math.abs(A[1] - B[1]), 2));
 };
 
+/* This is the functionality loop that checks every point for each station and outputs the coordinates of the station
+    with the best speed for every given point.A bestStation array variable is introduced as a placeholder for the station
+    with the best speed and its elements represent z the speed of station and x,y the coordinates of the station [z,x,y] 
+*/
 const calculate = (stations,points)=>{
-    // This is the functionality loop that checks every point for each station and outputs the coordinates of the station
-// with the best speed for every given point.A bestStation array variable is introduced as a placeholder for the station
-// with the best speed and its elements represent z the speed of station and x,y the coordinates of the station [z,x,y]
 var listResult = [];
 for (let i = 0; i < points.length; i++) {
     let bestStation = [0, 0, 0];
@@ -36,8 +37,8 @@ for (let i = 0; i < points.length; i++) {
  return listResult;
 }
 
-// This function calcutes the speed between a point and a station utilizing the given speed calculation formula
-// and the distance function we created above.
+/* This function calcutes the speed between a point and a station utilizing the given speed calculation formula
+and the distance function we created above. */
 const s = (point, station) => {
     const d = distance(point, station);
     if (d > station[2]) {
