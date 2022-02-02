@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install
 
-ADD app .
+ADD app ./app
 
 EXPOSE 5000
 CMD [ "npm", "start" ]
