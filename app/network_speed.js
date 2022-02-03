@@ -25,11 +25,11 @@ for (let i = 0; i < points.length; i++) {
     };
 
     if (bestStation[0] == 0) {
-        var rl= "No link station within reach for point " + points[i][0] + "," + points[i][1];
+        var rl= "No station within reach found, output error message" + points[i][0] + "," + points[i][1];
         console.log(rl);
         listResult.push(rl);
     } else {
-        var rl= "Best link station for point " + points[i][0] + "," + points[i][1] + " is " + bestStation[1] + "," + bestStation[2] + " with speed " + bestStation[0];
+        var rl= "Best station found, output station location and speed" + points[i][0] + "," + points[i][1] + " is " + bestStation[1] + "," + bestStation[2] + " with speed " + bestStation[0];
         console.log(rl);
         listResult.push(rl);
     };
