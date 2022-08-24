@@ -2,7 +2,8 @@
 # Tech assignment - Network speed
 
 # Problem
-Write a program that solves the most suitable (with highest non-zero speed) network station for a device at a given point (x, y).
+Write a program that solves the most suitable (with highest non-zero speed) network station 
+for a device at a given point (x, y).
 This problem can be solved in 2-dimensional space. Network stations have reach and speed that depends on the distance to the station.
 A network station’s speed can be calculated as follows:
 
